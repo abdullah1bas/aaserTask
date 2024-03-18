@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Box, Button, Divider, FormControl, NativeSelect, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import DataOptions from "./DataOptions";
-// import Pie from "../pages/home/Pie";
+import Pie from "./Pie";
 const UserData = ({data}) => {
     console.log('UserData Page');
     // const theme = useTheme();
@@ -76,139 +76,18 @@ const UserData = ({data}) => {
         <Typography variant="h6" sx={{color: '#fff' , textAlign: 'start'}}>Patient Satisfaction</Typography>
         <Box sx={{height: '300px'}}>
 
-        <Box height={"70px"} width={"87px"}>
-            {/* <Pie /> */}
-          {/* <ResponsivePie
-            data={data1}
-            margin={{ top: 10, right: 0, bottom: 10, left: 0 }}
-            innerRadius={0.7}
-            theme={{
-              textColor: theme.palette.text.primary,
-              fontSize: 11,
-              axis: {
-                domain: {
-                  line: {
-                    stroke: theme.palette.divider,
-                    strokeWidth: 1,
-                  },
-                },
-                legend: {
-                  text: {
-                    fontSize: 12,
-                    fill: theme.palette.text.primary,
-                  },
-                },
-                ticks: {
-                  line: {
-                    stroke: theme.palette.divider,
-                    strokeWidth: 1,
-                  },
-                  text: {
-                    fontSize: 11,
-                    fill: theme.palette.text.secondary,
-                  },
-                },
-              },
-              grid: {
-                line: {
-                  stroke: theme.palette.divider,
-                  strokeWidth: 1,
-                },
-              },
-              legends: {
-                title: {
-                  text: {
-                    fontSize: 11,
-                    fill: theme.palette.text.primary,
-                  },
-                },
-                text: {
-                  fontSize: 11,
-                  fill: theme.palette.text.primary,
-                },
-                ticks: {
-                  line: {},
-                  text: {
-                    fontSize: 10,
-                    fill: theme.palette.text.primary,
-                  },
-                },
-              },
-              annotations: {
-                text: {
-                  fontSize: 13,
-                  fill: theme.palette.text.primary,
-                  outlineWidth: 2,
-                  outlineColor: "#ffffff",
-                  outlineOpacity: 1,
-                },
-                link: {
-                  stroke: "#000000",
-                  strokeWidth: 1,
-                  outlineWidth: 2,
-                  outlineColor: "#ffffff",
-                  outlineOpacity: 1,
-                },
-                outline: {
-                  stroke: "#000000",
-                  strokeWidth: 2,
-                  outlineWidth: 2,
-                  outlineColor: "#ffffff",
-                  outlineOpacity: 1,
-                },
-                symbol: {
-                  fill: "#000000",
-                  outlineWidth: 2,
-                  outlineColor: "#ffffff",
-                  outlineOpacity: 1,
-                },
-              },
-              tooltip: {
-                container: {
-                  background: theme.palette.background.default,
-                  color: theme.palette.text.primary,
-                  fontSize: 12,
-                },
-                basic: {},
-                chip: {},
-                table: {},
-                tableCell: {},
-                tableCellValue: {},
-              },
-            }}
-            colors={{ scheme: 'nivo' }}
-            enableArcLabels={false}
-            enableArcLinkLabels={false}
-            padAngle={0.7}
-            cornerRadius={3}
-            activeOuterRadiusOffset={8}
-            borderWidth={1}
-            borderColor={{
-              from: "color",
-              modifiers: [["darker", 0.2]],
-            }}
-            defs={[
-              {
-                id: "dots",
-                type: "patternDots",
-                background: "inherit",
-                color: "rgba(255, 255, 255, 0.3)",
-                size: 4,
-                padding: 1,
-                stagger: true,
-              },
-              {
-                id: "lines",
-                type: "patternLines",
-                background: "inherit",
-                color: "rgba(255, 255, 255, 0.3)",
-                rotation: -45,
-                lineWidth: 6,
-                spacing: 10,
-              },
-            ]}
-          /> */}
+        <Box sx={{flexGrow: 1,minWidth: "300px",maxWidth: '300px', width: "28%", position: 'relative' }}>
+
+        <Pie isDashbord={true} />
+        <Box sx={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-78px, -78px)'}}>
+          <Typography variant="h6" align="center" sx={{ mt: "15px" , fontSize: '14px'}}>
+            Total
+          </Typography>
+          <Typography variant="body2" px={0.7} pb={3} align="center" sx={{fontSize: '18px', fontWeight: 'bold' ,color : '#306bde'}}>
+            45251 
+          </Typography>
         </Box>
+      </Box>
         
         </Box>
       </Stack>
